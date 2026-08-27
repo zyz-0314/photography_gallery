@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #0a0a0b;
+  --color-ink-2: #101012;
+  --color-ink-3: #161618;
+  --color-paper: #f2f2f2;
+  --color-muted: #888888;
+  --color-faint: #555555;
+  --color-line: #222222;
+  --color-line-soft: #1a1a1b;
+}
+
+:root {
+  --ease-cinema: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  background: var(--color-ink);
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  /* iOS long-press context menu (image save) is a right-click equivalent */
+  -webkit-touch-callout: none;
+}
+
+::selection {
+  background: #f2f2f2;
+  color: #0a0a0b;
+}
+
+/* Thin, quiet scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border: 3px solid #0a0a0b;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Uppercase tracking helper used across nav, labels and metadata */
+@utility label {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@utility label-sm {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Headline default: tight, bold-ish, display face */
+@utility headline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
