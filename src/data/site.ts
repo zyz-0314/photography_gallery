@@ -17,6 +17,11 @@ export const site = {
     text: "He said one day you'll leave this world behind, so live a life you'll remember.",
     by: "Avicii",
   },
+  social: {
+    youtube: "https://www.youtube.com/@r1yad_zyz",
+    instagram: "https://www.instagram.com/skywaalker.z/",
+    bilibili: "https://space.bilibili.com/3546982180194959",
+  },
 
   // MAIN — selected works
   selectedWorksLabel: "SELECTED WORKS",

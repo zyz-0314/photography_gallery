@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SmartImage } from "@/components/ui/SmartImage";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { HeroIntro } from "@/components/HeroIntro";
 import { HorizontalPhotoGallery } from "@/components/HorizontalPhotoGallery";
 import { ProjectPreview } from "@/components/ProjectPreview";
@@ -37,6 +38,8 @@ export async function MainSection() {
                 — {site.quote.by}
               </span>
             </blockquote>
+
+            <SocialLinks className="mt-8" />
 
             {/* photography categories → each opens its collection */}
             <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-line-soft pt-8">
