@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "images": "node scripts/optimize-images.mjs",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy"
+    "images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "d3-geo": "^3.1.1",
@@ -21,7 +20,6 @@
     "world-atlas": "^2.0.2"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "^1.20.4",
     "@tailwindcss/postcss": "^4",
     "@types/d3-geo": "^3.1.1",
     "@types/node": "^20",
@@ -32,7 +30,6 @@
     "eslint-config-next": "16.3.1",
     "sharp": "^0.35.3",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "wrangler": "^4.127.1"
+    "typescript": "^5"
   }
 }
